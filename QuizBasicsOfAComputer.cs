@@ -55,7 +55,7 @@ namespace Course_Page
                 int q1 = dbh.getQ1(qID);
                 databaseHelper.updateQ1(qID, percentage);
                 
-                if(q1 == 0)
+                if(q1 == 0 && !QuizIncomplete())
                 {   
                     string line2 = "";
 

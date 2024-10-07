@@ -53,7 +53,7 @@ namespace Course_Page
                 int q3 = dbh.getQ3(qID);
                 databaseHelper.updateQ3(qID, percentage);
 
-                if (q3 == 0)
+                if (q3 == 0 && !QuizIncomplete())
                 {
                     string line3 = "";
                     using (StreamReader sr3 = new StreamReader(@"Data Source = ..\..\progress.txt"))

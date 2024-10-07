@@ -39,7 +39,9 @@ namespace HomePage
             int uID2 = dbh.getUid(line2);
             int TeacherID = dbh.getTid(uID2);
             int uID = dbh.getUid(textBox1.Text);
+            int qID = dbh.getQuizID(uID);
             databaseHelper.updateTid(uID, TeacherID);
+            databaseHelper.updateQuizTID(qID, TeacherID);
         }
     }
 }

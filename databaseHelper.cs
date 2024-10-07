@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
+using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -674,11 +675,12 @@ public class databaseHelper
             return Convert.ToInt32(result2);
         }
     }
+    //SELECT ... FROM table1 JOIN table2 USING ( column1 ,... )
     public static void FillTable2(DataGridView data, int tID)
     {
         using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-        {
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM SeniorCitizen WHERE tID='"+tID+"'", connection))
+        { 
+            using (SQLiteCommand command = new SQLiteCommand("SELECT sFName,sLName, sProgress, q1,q2,q3,q4,q5 FROM SeniorCitizen INNER JOIN Quiz ON SeniorCitizen.qID = Quiz.qID WHERE SeniorCitizen.tID='" + tID+"'", connection))
             {
                 using (SQLiteDataAdapter sda = new SQLiteDataAdapter(command))
                 {
@@ -730,6 +732,34 @@ public class databaseHelper
                 }
             }
 
+        }
+    }
+
+    public static void updateQuizTID(int qID, int tID)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            string query = "UPDATE Quiz SET tID = @tID WHERE qID = @qID";
+
+            try
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    // Add parameters to prevent SQL injection
+                    command.Parameters.AddWithValue("@qID", qID);
+                    command.Parameters.AddWithValue("@tID", tID);
+
+                    // Execute the update query
+                    var rowsAffected = command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
         }
     }
 }
