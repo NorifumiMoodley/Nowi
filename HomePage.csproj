@@ -173,6 +173,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignTeacher.Designer.cs">
+      <DependentUpon>AssignTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="ATMSimulationsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +328,15 @@
     <Compile Include="QuizHowToUseInternet.Designer.cs">
       <DependentUpon>QuizHowToUseInternet.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReviewResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewResult.Designer.cs">
+      <DependentUpon>ReviewResult.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AssignTeacher.resx">
+      <DependentUpon>AssignTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ATMSimulationsForm.resx">
       <DependentUpon>ATMSimulationsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -403,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuizHowToUseInternet.resx">
       <DependentUpon>QuizHowToUseInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewResult.resx">
+      <DependentUpon>ReviewResult.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ATMSim\ATM.application" />
     <None Include="packages.config" />

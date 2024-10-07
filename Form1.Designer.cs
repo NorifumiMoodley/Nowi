@@ -61,6 +61,7 @@
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.button7 = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHamburger)).BeginInit();
@@ -434,12 +435,23 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(496, 258);
             this.axWindowsMediaPlayer1.TabIndex = 13;
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(800, 397);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(111, 45);
+            this.button12.TabIndex = 15;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(982, 953);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.sidebar);
@@ -509,6 +521,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button11;
 		private System.Windows.Forms.Panel panel6;
-	}
+        private System.Windows.Forms.Button button12;
+    }
 }
 

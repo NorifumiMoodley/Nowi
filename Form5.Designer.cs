@@ -86,7 +86,7 @@
             this.label1.Location = new System.Drawing.Point(455, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 33);
+            this.label1.Size = new System.Drawing.Size(253, 42);
             this.label1.TabIndex = 2;
             this.label1.Text = "HOME PAGE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -98,7 +98,7 @@
             this.label2.Location = new System.Drawing.Point(417, 429);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(308, 25);
+            this.label2.Size = new System.Drawing.Size(380, 31);
             this.label2.TabIndex = 3;
             this.label2.Text = "Add Senior Citizen To Class";
             // 
@@ -123,7 +123,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 61);
+            this.panel1.Size = new System.Drawing.Size(982, 61);
             this.panel1.TabIndex = 11;
             // 
             // pictureBox3
@@ -162,7 +162,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 61);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(239, 900);
+            this.sidebar.Size = new System.Drawing.Size(239, 892);
             this.sidebar.TabIndex = 12;
             // 
             // panel2
@@ -319,6 +319,7 @@
             this.button4.Text = "              Assign Teacher";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel6
             // 
@@ -391,10 +392,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(673, 246);
+            this.tabPage1.Size = new System.Drawing.Size(673, 241);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Senior Citizen";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -410,10 +411,10 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(673, 246);
+            this.tabPage2.Size = new System.Drawing.Size(673, 241);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Users";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -422,16 +423,16 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(518, 478);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 26);
+            this.textBox1.Size = new System.Drawing.Size(122, 30);
             this.textBox1.TabIndex = 14;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(984, 961);
+            this.ClientSize = new System.Drawing.Size(982, 953);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.sidebar);

@@ -80,7 +80,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 69);
+            this.panel1.Size = new System.Drawing.Size(961, 69);
             this.panel1.TabIndex = 1;
             // 
             // btnForward
@@ -153,7 +153,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 76);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(957, 1083);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(917, 1083);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // label3
@@ -177,7 +177,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 90);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(955, 149);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(892, 149);
             this.flowLayoutPanel2.TabIndex = 5;
             // 
             // pictureBox2
@@ -290,7 +290,7 @@
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 699);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 34, 3, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(719, 228);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(719, 144);
             this.flowLayoutPanel3.TabIndex = 20;
             // 
             // pictureBox5

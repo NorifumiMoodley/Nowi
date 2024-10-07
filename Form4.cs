@@ -121,5 +121,12 @@ namespace SeniorCitizenLogin
 			Form5 Frm = new Form5();
 			Frm.Show();
 		}
-	}
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form7 frm = new Form7();
+            this.Hide();
+            frm.Show();
+        }
+    }
 }

@@ -137,5 +137,9 @@ namespace Course_Page
             return totalScore;
         }
 
+        private void QuizBasicsOfAComputer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

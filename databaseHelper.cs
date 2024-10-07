@@ -615,4 +615,121 @@ public class databaseHelper
             return Convert.ToInt32(result2);
         }
     }
+
+    public int getTid(int uID2)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            string query2 = "SELECT tID FROM Teacher WHERE uID = '" + uID2 + "'";
+
+            SQLiteCommand command2 = new SQLiteCommand(query2, connection);
+            connection.Open();
+
+            object result2 = command2.ExecuteScalar();
+
+            return Convert.ToInt32(result2);
+        }
+    }
+
+    public static void updateTid(int uID, int tID)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+
+            string query = "UPDATE SeniorCitizen SET tID = @tID WHERE uID = @uID";
+
+            try
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    // Add parameters to prevent SQL injection
+                    command.Parameters.AddWithValue("@uID", uID);
+                    command.Parameters.AddWithValue("@tID", tID);
+
+                    // Execute the update query
+                    var rowsAffected = command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+    }
+
+    public int getStudents(int tid)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            string query2 = "SELECT * FROM SeniorCitizen WHERE tID = '" + tid + "'";
+
+            SQLiteCommand command2 = new SQLiteCommand(query2, connection);
+            connection.Open();
+
+            object result2 = command2.ExecuteScalar();
+
+            return Convert.ToInt32(result2);
+        }
+    }
+    public static void FillTable2(DataGridView data, int tID)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM SeniorCitizen WHERE tID='"+tID+"'", connection))
+            {
+                using (SQLiteDataAdapter sda = new SQLiteDataAdapter(command))
+                {
+                    using (DataTable dt = new DataTable())
+                    {
+                        sda.Fill(dt);
+                        data.DataSource = dt;
+                    }
+
+                }
+            }
+
+        }
+    }
+    public static void FillTable3(DataGridView data, int sID)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM SeniorCitizen WHERE sID='" + sID + "'", connection))
+            {
+                using (SQLiteDataAdapter sda = new SQLiteDataAdapter(command))
+                {
+                    using (DataTable dt = new DataTable())
+                    {
+                        sda.Fill(dt);
+                        data.DataSource = dt;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    public static void FillTable4(DataGridView data, int qID)
+    {
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Quiz WHERE qID='" + qID + "'", connection))
+            {
+                using (SQLiteDataAdapter sda = new SQLiteDataAdapter(command))
+                {
+                    using (DataTable dt = new DataTable())
+                    {
+                        sda.Fill(dt);
+                        data.DataSource = dt;
+                    }
+
+                }
+            }
+
+        }
+    }
 }

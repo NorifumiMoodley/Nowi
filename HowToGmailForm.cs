@@ -48,5 +48,12 @@ namespace Course_Page
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HowToGmailForm2 howToGmailForm2 = new HowToGmailForm2();
+            this.Hide();
+            howToGmailForm2.Show();
+        }
     }
 }

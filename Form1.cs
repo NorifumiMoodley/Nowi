@@ -63,6 +63,7 @@ namespace HomePage
 
         }
 
+
         private void btnHome_Click(object sender, EventArgs e)
         {
 
@@ -157,7 +158,7 @@ namespace HomePage
         private void button11_Click(object sender, EventArgs e)
         {
             TextWriter txt = null;
-            string filePath = "C:\\Users\\Caldon\\Desktop\\New folder (2)\\HomepagePRJT\\HomePage\\username.txt";
+            string filePath = @"Data Source =..\..\username.txt";
             txt = new StreamWriter(filePath);
             txt.WriteLine("");
             txt.Close();
@@ -175,6 +176,13 @@ namespace HomePage
 
 
 		}
-	}
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReviewResult frm=new ReviewResult();
+            frm.Show();
+        }
+    }
     
 }

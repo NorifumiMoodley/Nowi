@@ -39,6 +39,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnLogin = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picVideoPlaceholder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(418, 389);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(285, 29);
             this.txtUsername.TabIndex = 1;
@@ -84,7 +85,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(418, 458);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(285, 29);
@@ -96,7 +97,7 @@
             this.btnCreateAccount.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateAccount.Location = new System.Drawing.Point(492, 540);
-            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(245, 55);
             this.btnCreateAccount.TabIndex = 4;
@@ -109,7 +110,7 @@
             this.picVideoPlaceholder.BackColor = System.Drawing.Color.LightSkyBlue;
             this.picVideoPlaceholder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picVideoPlaceholder.Location = new System.Drawing.Point(256, 171);
-            this.picVideoPlaceholder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picVideoPlaceholder.Margin = new System.Windows.Forms.Padding(4);
             this.picVideoPlaceholder.Name = "picVideoPlaceholder";
             this.picVideoPlaceholder.Size = new System.Drawing.Size(447, 169);
             this.picVideoPlaceholder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +135,7 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(226, 540);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(245, 55);
             this.btnLogin.TabIndex = 7;
@@ -145,7 +146,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(839, 156);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 8;
@@ -153,12 +154,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(376, 627);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(235, 31);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot Password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(982, 953);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblLogin);
@@ -169,7 +183,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
@@ -193,6 +207,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnLogin;
 		private System.Windows.Forms.Button button1;
-	}
+        private System.Windows.Forms.LinkLabel linkLabel1;
+    }
 }
 

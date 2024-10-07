@@ -37,7 +37,7 @@ namespace HomePage
 
             try
             {
-                StreamReader sr = new StreamReader(@"C:\Users\Caldon\Desktop\New folder (2)\HomepagePRJT\HomePage\username.txt");
+                StreamReader sr = new StreamReader(@"Data Source =..\..\\username.txt");
 
                 line = sr.ReadLine();
 
@@ -63,5 +63,17 @@ namespace HomePage
             //string filePath = "C:\\Users\\Caldon\\Documents\\CTRL_APP\\CTRL_APP\\HomepagePRJT (1)\\HomepagePRJT\\HomePage\\username.txt";
 			
 		}
-	}
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            this.Hide();
+            frm.Show();
+        }
+    }
 }

@@ -90,10 +90,10 @@ namespace Course_Page
                 databaseHelper dbh = new databaseHelper();
                 int uID = dbh.getUid(name);
                 int qID = dbh.getQuizID(uID);
-                int q1 = dbh.getQ2(qID);
-                databaseHelper.updateQ2(qID, percentage);
+                int q5 = dbh.getQ5(qID);
+                databaseHelper.updateQ5(qID, percentage);
 
-                if (q1 == 0)
+                if (q5 == 0)
                 {
                     string line2 = "";
                     using (StreamReader sr2 = new StreamReader(@"Data Source = ..\..\progress.txt"))

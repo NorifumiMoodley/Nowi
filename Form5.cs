@@ -35,7 +35,19 @@ namespace HomePage
             if (result.Equals("1"))//taking button from form 2
             {
             }
-            
+            string line2 = "";
+
+            using (StreamReader sr2 = new StreamReader(@"Data Source =..\..\username.txt"))
+            {
+                line2 = sr2.ReadLine();
+                Console.ReadLine();
+            }
+
+            databaseHelper dbh = new databaseHelper();
+            int uID2 = dbh.getUid(line2);
+            int TeacherID = dbh.getTid(uID2);
+            databaseHelper.FillTable2(dataGridView1, TeacherID);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -154,13 +166,20 @@ namespace HomePage
         private void button11_Click(object sender, EventArgs e)
         {
             TextWriter txt = null;
-            string filePath = "C:\\Users\\Caldon\\Desktop\\New folder (2)\\HomepagePRJT\\HomePage\\username.txt";
+            string filePath = @"Data Source =..\..\username.txt";
             txt = new StreamWriter(filePath);
             txt.WriteLine("");
             txt.Close();
 
             this.Hide();
             Form4 frm = new Form4();
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AssignTeacher frm = new AssignTeacher();
             frm.Show();
         }
     }
